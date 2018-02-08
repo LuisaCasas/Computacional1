@@ -1,0 +1,89 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\usepackage{graphicx}
+\usepackage{float}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Reporte de Actividad 2}
+\author{Luisa Julieta Casas Cervantes}
+\date{7 de Febrero del 2018}
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Objetivo}
+Realizar una pequeña introducción al lenguaje de programación Python por medio de Jupyter Notebook utilizando datos tomados de la página del Servicio Meteorológico Nacional y manipulándolos con el código Python.
+\section{Desarrollo}
+Primero creé una carpeta llamada "actividad 2" dentro de Computacional1 en mi sesión. Luego entré a la página del Servicio Meteorológico Nacional que es de donde obtuve los datos a trabajar. Elegí la ciudad de Cuauhtémoc, Chihuahua. Guardé los datos proporcionados en un texto de emacs dentro de la carpeta actividad 2. Luego, desde la terminal, abrí esta misma carpeta y accedí a Jupyter Notebook desde ahí. Al entrar, encontré el texto con los datos.\\
+\\Creé un nuevo archivo del tipo ".ipynb" con el nombre "Actividad 2" para comenzar a trabajar. Comencé copiando y pegando el código del ejemplo proporcionado en pbworks, y analizando a su vez los resultados que iba imprimiendo el código.
+\\Para realizar las actividades que se solicitaban, releí los códigos copiados para comprender su asociación a los resultados impresos en pantalla. De este modo realicé las gráficas de:
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{velsvelr.png}
+\caption{i.Velocidad del viento y Velocidad de las ráfagas}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{dirs.png}
+\caption{ii.Dirección de los vientos en función del tiempo}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{rads.png}
+\caption{iii.Radiación Solar contra tiempo}
+\end{figure}
+Luego de crear las gráficas, pedí a Jupyter mostrarme (según mis datos), las temperaturas mínima y máxima de ciudad Cuauhtémoc. A lo que me mostró 1.2 y 21.8 respectivamente a lo que concluí que el clima en ese lugar es realmente frío a pesar de que las temperaturas no bajan de cero grados, la mínima se encuentra muy cerca y la máxima sigue siendo muy baja en comparación al clima frío de lugares como Hermosillo.
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{temps.png}
+\caption{iv.Comparación de temperaturas mínima y máxima}
+\end{figure}
+Para la actividad adicional v, comparé la temperatura con la humedad relativa (gráfica la cual se realizó fuera de las actividades adicionales) y concluí que la temperatura se encuentra dentro de un margen aparentemente constante mientras que la humedad relativa varía impresionantemente.
+\\Para la actividad vi realicé un análisis exploratorio de datos que arrojó lo siguiente:
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{describe.png}
+\caption{vi.Análisis exploratorio}
+\end{figure}
+\section{Código}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{i.png}
+\caption{Actividad adicional i.}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{ii.png}
+\caption{AA ii.}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{iii.png}
+\caption{AA iii.}
+\end{figure}
+\begin{figure}
+\section{Conclusiones}
+Me parece un lenguaje bastante completo y, aunque no termino de comprenderlo del todo, parece práctico y especialmente útil por sus herramientas de graficación.
+\section{Apéndice}
+\begin{enumerate}
+\item ¿Cuál es tu primera impresión de Jupyter Notebook?
+\\Sencillo. Me agrada que se utilicen celdas por sección de código, creo que hace todo más limpio.
+\item ¿Se te dificultó leer código en Python?
+\\Sí, aún no comprendo muy bien por qué me salían algunos errores...
+\item ¿En base a tu experiencia de programación en Fortran, que te parece el entorno
+de trabajar en Python?
+\\¡Mejor! Python ya tiene muchas herramientas implementadas y es mucho más rápido, al menos a través de Jupyter.
+\item A diferencia de Fortran, ahora se producen las gráficas utilizando la biblioteca Matplotlib. ¿Cómo fue tu experiencia?.
+\\Excelente, aunque será necesario trabajar en esa parte para gráficas de otros tipos o más complejas.
+\item En general, ¿qué te pareció el entorno de trabajo en Python?
+\\Práctico, sencillo y rápido.
+\item ¿Qué opinas de la actividad? ¿Estuvo compleja? ¿Mucho material nuevo? ¿Que le
+faltó o que le sobró? ¿Qué modificarías para mejorar?
+\\En lo personal, me faltó tiempo pues no terminé de comprender muchas cosas y no me surge natural (aún) el escribir en Python como en LaTex.
+\item ¿Comentarios adicionales que desees compartir?
+\\Las imágenes están desordenadas por alguna razón en este reporte... Me gustaría saber cómo arreglarlo.
+\end{enumerate}
+\end{document}
