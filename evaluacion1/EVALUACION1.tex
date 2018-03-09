@@ -1,0 +1,96 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Evaluación 1}
+\author{Luisa Casas}
+\date{08 Marzo 2018}
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Limpieza de Datos}
+Comencé por descargar los archivos provistos por la página de computacional1.pbworks.com, y luego de renombrarlos, utilicé los comandos de emacs para reemplazar diagonales por espacios.
+\section{Pandas}
+\subsection{Primera y Segunda parte}
+Primero importé las bibliotecas de pandas y matplotlib e hice que python me mostrara un encabezado para asegurarme de que la lectura fuera correcta. Después extraje el mes dado que es más fácil manejar los datos con un solo mes.
+\\Hice lo mismo para el segundo archivo, el cual incluía los datos de Salinidad.
+\begin{figure}[H]
+\includegraphics[height=10cm]{1.PNG}
+\end{figure}
+\subsection{Tercera parte}
+Siguiente, importé la biblioteca de Seaborn para comenzar a hacer gráficas.
+\begin{figure}[H]
+\includegraphics[height=8cm]{2.PNG}
+\caption{(a)Nivel del agua}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{3.PNG}
+\caption{(b)Salinidad}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=10cm]{4.PNG}
+\caption{(c)Temperatura}
+\end{figure}
+\subsection{Correlación de Pearson}
+Empleando de nuevo la ayuda de Seaborn, cree gráficas para explorar si había una correlación entre cada pareja de variables.
+\begin{figure}[H]
+\includegraphics[height=8cm]{5.PNG}
+\caption{Nivel del mar-Salidad}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{6.PNG}
+\caption{Nivel del mar-Temperatura}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{7.PNG}
+\caption{Salinidad-Temperatura}
+\end{figure}
+\subsection{Gráficas Independientes}
+En esta sección se pide realizar gráficas independientes de distintas variables como función del tiempo.
+\begin{figure}[H]
+\includegraphics[height=8cm]{8.PNG}
+\caption{Nivel del mar}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{9.PNG}
+\caption{Salinidad}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{10.PNG}
+\caption{Temperatura}
+\end{figure}
+\subsection{Gráficas superpuestas}
+Para esta sección, me fue necesario crear una concatenación de ambos archivos, dejando sólamente las variables de Fecha, Temperatura, Nivel del mar, Salinidad y número de muestra.
+\begin{figure}[H]
+\includegraphics[height=8cm]{11.PNG}
+\caption{Concatenación}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{12.PNG}
+\caption{Nivel del mar contra Salinidad}
+\end{figure}
+\subsection{Limitando rangos}
+En esta sección utilicé la función de "xlim" para limitar el análisis de los datos a mediciones de 5 días, lo cual era un aproximado de 500 datos.
+\begin{figure}[H]
+\includegraphics[height=8cm]{13.PNG}
+\caption{5 días Nivel del mar-Salinidad}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=8cm]{14.PNG}
+\caption{5 días Nivel del mar-Temperatura}
+\end{figure}
+\end{document}
