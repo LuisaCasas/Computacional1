@@ -1,0 +1,80 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{graphicx}
+\usepackage{ifxetex}
+\usepackage{float}
+\usepackage{}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Reporte Actividad 8}
+\author{Luisa Julieta Casas Cervantes}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Introducción}
+El oscilador de Van der Pol fue originalmente propuesto por el ingeniero y físico Balthasar Van der Pol. Este hombre encontró oscilaciones estables a las cuales llamó "oscilaciones relajadas" y que ahora se conocen como ciclo límite en circuitos eléctricos empleando tubos al vacío.Cuando estos circuitos conducen cerca del ciclo límite, se arrastran, lo que quiere decir que las señales conductoras se arrastran con la corriente.
+\\Van der Pol junto a su colega van der Mark reportaron para Nature que en ciertas frecuencias, se escuchaba un ruido irregular, lo cual después se encontró resultado del caos determinístico.
+\subsection{Modelo de Van der Pol}
+En dinmámica, el modelo de Van der Pol es un oscilador no conservativo con amortiguamiento no linear. Evoluciona en el tiempo de acuerdo con la ec. diferencial
+\begin{figure}[H]
+\includegraphics[height=5cm]{ecdif.png}
+\end{figure}
+donde x es la coordenada de posición -la cual es función del tiempo y $\mu$ un parámetro escalar que indica la no-linearidad y la fuerza de amortiguamiento.
+\subsection{Exploración del modelo en espacio-fase}
+En esta práctica se intentará replicar las gráficas mostradas en el artículo de wikiPedia "Van der Pol Oscillator", lo que nos dará una representación visual de los distintos fenómenos físicos que se presentan bajo distintas condiciones.
+\section{Resultados}
+Ejemplo 1:
+\\-Oscilador de Van der Pol no forzado
+\begin{figure}[H]
+\includegraphics[height=10cm]{11.png}
+\end{figure}
+-Campo direccion del oscilador de Van der Pol no forzado
+\begin{figure}[H]
+\includegraphics[height=10cm]{12.png}
+\end{figure}
+Ejemplo 2:
+\\-Evolución del ciclo límite en fase plana
+\begin{figure}[H]
+\includegraphics[height=10cm]{21.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=10cm]{22.png}
+\end{figure}
+Ejemplo 3:
+\\-Oscilación relajada sin fuerzas externas
+\begin{figure}[H]
+\includegraphics[height=10cm]{31.png}
+\end{figure}
+Ejemplo 4:
+\\-Comportamiento caótico en el oscilador de Van der Pol con forzamiento sinusoidal
+\begin{figure}[H]
+\includegraphics[height=10cm]{41.png}
+\end{figure}
+\section{Apéndice}
+\begin{enumerate}
+\item Este ejercicio pareciera similar al desarrollado en las actividades 6 y 7. ¿Qué aprendiste nuevo?
+\\A generar gráficas representativas de líneas de campo.
+\item ¿Qué fue lo que más te llamó la atención del oscilador de Van der Pol?
+\\Su relación con el caos.
+\item Has escuchado ya hablar de caos. ¿Por qué sería importante estudiar este oscilador?
+\\Para implementar posibles teorías de termodinámica.
+\item ¿Qué mejorarías en esta actividad?
+\\Más tiempo.
+\item ¿Algún comentario adicional antes de dejar de trabajar en Jupyter con Python?
+\\Fue agradable aprender a usar esta plataforma.
+\item Cerramos la parte de trabajo con Python ¿Que te ha parecido?
+\\Algo difícil, pero posiblemente sea últil a futuro.
+\end{enumerate}
+\end{document}
