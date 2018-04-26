@@ -1,0 +1,70 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{graphicx}
+\usepackage{ifxetex}
+\usepackage{float}
+\usepackage{}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Evaluación 2}
+\author{Luisa Julieta Casas Cervantes}
+\date{26 de Abril 2018}
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Introducción}
+El atractor de Lorenz es un concepto introducido por Edward Lorenz en 1963. Se trata de un sistema dinámico determinista tridimensional no lineal derivado de ecuaciones simplificadas de rollos de transferencia de calor que se producen en las ecuaciones dinámicas de la atmósfera.
+\section{Desarrollo}
+Tomando como guía el trabajo de github por Geoff Boeing, reproducimos la solución del atractor de Lorenz en forma visual y animada por medio de Jupyter para los valores ya preestablecidos por el autor.
+\\Siguiente, graficamos la evolución de las condiciones iniciales en función del tiempo.
+\\Después, habiendo duplicado los archivos originales, edité los archivos copia para realizar observar la solución visual con otros valores de sigma, rho y beta.
+\\En la sección final, se evalúa el proceso con los valores de sigma = 10, beta = 8/3 y rho = 99.96.
+\\Los resultados fueron los siguientes para cada caso.
+\section{Resultados}
+*NOTA: Las imágenes de animación se encuentran en las carpetas de imágenes en Jupyter Notebook.
+\subsection{Resultados p/ Valores Originales}
+Para los valores preestablecidos por el autor (sigma=10, beta= 28, rho= 8/3), las gráficas resultantes fueron las siguientes:
+\begin{figure}[H]
+\includegraphics[height=7cm]{orig.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=7cm]{lor.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{npha.png}
+\end{figure}
+\subsection{Resultados p/ Valores Cambiados}
+Para los valores de sigma= 28, beta= 4, rho= 46.92, las gráficas resultantes fueron
+\begin{figure}[H]
+\includegraphics[height=7cm]{norig.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=7cm]{nlor.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{pha.png}
+\end{figure}
+Para los valores de sigma= 10, beta= 8/3 y rho= 99.96, las gráficas resultantes fueron las siguientes
+\begin{figure}[H]
+\includegraphics[height=7cm]{nno.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[height=7cm]{nnlo.png}
+\end{figure}
+\begin{figure}[H]
+\includegraphics[width=\linewidth]{nnph.png}
+\end{figure}
+\subsection{Contraste}
+Entre los primeros valores y los segundos, las gráficas solo muestran mayor saturación en la segunda, sin embargo, el contraste de ambas contra las gráficas de los últimos valores, se observa mayormente un gran cambio en el análisis bidimensional donde ya no se observan aparentes frentes de onda, sino más bien oscilaciones mucho más rápidas a pesar de no cambiar la periodicidad y una saturación mayor. Lo más interesante es que con esos mismos valores, las gráficas de fase y el atractor de Lorenz se observan por el contrario, mucho menos saturados de trazos.
+\end{document}
