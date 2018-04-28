@@ -1,0 +1,79 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{graphicx}
+\usepackage{ifxetex}
+\usepackage{float}
+\usepackage{}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+% used in maketitle
+\title{Actividad 9}
+\author{Luisa Julieta Casas Cervantes}
+\date{23 de Abril 2018}
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+% \usepackage{sagetex}
+
+\begin{document}
+\maketitle
+\section{Introducción: ¿Qué es wxMaxima?}
+Uno de los Sistemas Algebraicos Computacionales más viejos se llama Macsyma, cuyo software comenzó por investigadores del MIT en 1968. Fue desarrollado durante los 70's por el MIT hasta que finalmente se patentó bajo una empresa llamada Symbolics.
+\\Como es de esperarse, un programa algebraico desarrollado en los setentas, no es precisamente visualmente estético, de modo que wxMaxima, es una versión implementada estéticamente de este CAS, gratuito y en línea. 
+\section{Integración}
+\subsection{Integración Indefinida}
+Ejemplo: Para integrar la función $$\int {x^2}{\;dx}$$ utilizamos el comando "integrate" de la siguiente manera
+\begin{figure}[H]
+\includegraphics[height=7cm]{intind.png}
+\end{figure}
+Como podemos observar, al utilizar el comando integrate, necesitamos especificar dentro de paréntesis dos cosas: la función, y separando con una coma, la variable respecto a la cual se integrará. 
+\\En la imagen también podemos observar que se utiliza el mismo comando con una comilla al inicio, esto hace que wxMaxima sólo muestre la integral sin resolverla. 
+\subsection{Integración Definida}
+Ejemplo: Para una integración definida $$\int_{1}^{2}{x^2\;dx}$$ el proceso es el siguiente
+\begin{figure}[H]
+\includegraphics[height=7cm]{intdef.png}
+\end{figure}
+Observamos que en el caso de la integral definida, solamente es necesario añadir separando con comas dentro del paréntesis, además de la función y la variable respecto a la que se integra, el límite inferior y el límite superior.
+\\Del mismo modo, al añadir una comilla al inicio del comando, se nos presentará la integral sin resolver en pantalla. 
+\section{Derivación}
+Ejemplo: Para derivar la función $f(x)=x^{3}$
+$${{d}\over{d\,x}}\,x^3$$
+se utiliza el comando "diff" de la siguiente manera
+\begin{figure}[H]
+\includegraphics[height=7cm]{der.png}
+\end{figure}
+En la imagen se observan tres entradas y tres salidas. En la primera entrada se observa la derivada ya calculada. Esto se hace escribiendo "diff" y abriendo un paréntesis, especificamos, igual que con la integración, la función, la variable respecto a la que derivamos, y además, la cantidad de veces que se desea derivar, de modo que en la segunda entrada, derivamos dos veces y el resultado se muestra debajo. 
+\\Al igual que en la integración, al añadir una comilla al inicio, se presenta en pantalla la derivada sin calcular. 
+\section{Ecuaciones}
+\subsection{Solución}
+Para resolver ecuaciones, utilizamos el comando "solve" de la siguiente manera. 
+\begin{figure}[H]
+\includegraphics[height=5cm]{ec.png}
+\end{figure}
+Por ejemplo en este caso, se pretende resolver $${\it solve}\left(\left[ 7\,y+2\,x=15 \right]  , \left[ x \right] 
+ \right)$$
+Y para resolverse, se escribe el comando "solve", se abre un paréntesis, seguidamente un corchete donde se escribe la ecuación a resolver, se cierra el corchete, y separado por una coma, dentro de otro corchete la variable cuyo valor deseamos encontrar. Cerramos el corchete y cerramos el paréntesis.
+\subsection{Raíces de un polinomio}
+Se utiliza el comando "allroots" como $$\left[ x=3.684658438426491 , x=-8.68465843842649 \right] $$
+\begin{figure}[H]
+\includegraphics[height=5cm]{rt.png}
+\end{figure}
+Podemos ver que la configuración escrita es el comando "allroots", se abre paréntesis, se escribe el polinomio (hay que tomar en cuenta que solamente debe depender de una variable) y se cierra el paréntesis. La solución mostrará todas las raíces diferentes encontradas separadas por comas.
+\section{Apéndice}
+\begin{enumerate}
+\item ¿Cuál fue tu primera impresión de wxmaxima?
+\\Muy fácil de usar.
+\item ¿Crees que esta herramienta puede ser útil en otros de tus cursos?
+\\Muchísimo.
+\item ¿Qué se te dificultó mas en esta actividad?
+\\Aprender a escribir las operaciones.
+\item ¿Se te hizo compleja esta actividad? ¿Cómo la mejorarías? 
+\\No fue difícil, fue divertido.
+\end{enumerate}
+\end{document}
